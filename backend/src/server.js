@@ -16,7 +16,7 @@ const port = 8000;
 
 
 app.use(bodyParser.json());
-app.use(cors())
+// app.use(cors())
 app.get('/',async(req,res)=>
 {
     res.send("ok")

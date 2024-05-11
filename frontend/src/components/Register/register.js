@@ -32,7 +32,6 @@ const Register = () => {
                 return;
             }
 
-            // const response = await axios.post('http://localhost:8000/register', { name, email, password });
             const response = await axios.post('https://post-khhn.onrender.com/register', { name, email, password });
 
 
