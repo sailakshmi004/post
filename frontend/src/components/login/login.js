@@ -17,7 +17,7 @@ const Login = () => {
         return;
     }
     try {
-        const response = await axios.post('http://localhost:8000/login', { email, password });
+        const response = await axios.post('https://post-khhn.onrender.com/login', { email, password });
         if (response.data.message === 'Login successful') {
         console.log(response.data);
         alert("Login Successful");
