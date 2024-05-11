@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// const cors=require('cors')
+const cors=require('cors')
 
 
 const pool =require('./db.js');
@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 
 
 // app.use(cors())
+app.use(cors({
+  origin: 'https://cmsproject-sailakshmi004s-projects.vercel.app'
+}));
+
 app.get('/',async(req,res)=>
 {
     res.send("ok")
