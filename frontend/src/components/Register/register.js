@@ -28,7 +28,9 @@ const Register = () => {
         try {
             
             if (!validateEmail(email)) {
-                alert("Invalid email format address");
+                alert("Fill details");
+
+                // alert("Invalid email format address");
                 return;
             }
 
