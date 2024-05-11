@@ -1,0 +1,25 @@
+/* .back{
+      background: linear-gradient(45deg, #87CEEB, #9cf4eb, #cea6e8, #f6cfcc, #CCCCFF);
+      background-size: cover;
+      height: 100vh;
+      
+  ;
+} */
+
+.back{
+  /* background: linear-gradient(45deg, #333333,#001F3F,#004225); */
+
+  /* background-color:#929090; */
+  background-color: #F0F0F0;
+
+
+
+
+  background-size: cover;
+  height: 100vh;
+  
+
+}
+.btns{
+  color: black;
+}
