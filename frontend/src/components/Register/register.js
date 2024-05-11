@@ -23,20 +23,51 @@ const Register = () => {
         }
     };
 
+    // const Submit = async (event) => {
+    //     event.preventDefault();
+    //     try {
+            
+    //         if (!validateEmail(email)) {
+    //             alert("Fill details");
+
+    //             // alert("Invalid email format address");
+    //             return;
+    //         }
+
+    //         const response = await axios.post('https://post-khhn.onrender.com/register', { name, email, password });
+
+
+    //         if (response.data) {
+    //             console.log(response.data);
+    //             alert("Successfully Registered");
+    //             nav("/login");
+    //         }
+    //     } catch (error) {
+    //         if (error.response) {
+    //             console.log("Email already exists");
+    //             // alert("Fill details");
+    //         } else {
+    //             console.log(error);
+    //             alert("An error occurred. Please try again later.");
+    //         }
+    //     }
+    // };
+
     const Submit = async (event) => {
         event.preventDefault();
         try {
-            
-            if (!validateEmail(email)) {
+            if (!name || !email || !password) {
                 alert("Fill details");
-
-                // alert("Invalid email format address");
                 return;
             }
-
+    
+            if (!validateEmail(email)) {
+                alert("Invalid email format address");
+                return;
+            }
+    
             const response = await axios.post('https://post-khhn.onrender.com/register', { name, email, password });
-
-
+    
             if (response.data) {
                 console.log(response.data);
                 alert("Successfully Registered");
@@ -45,13 +76,13 @@ const Register = () => {
         } catch (error) {
             if (error.response) {
                 console.log("Email already exists");
-                // alert("Fill details");
             } else {
                 console.log(error);
                 alert("An error occurred. Please try again later.");
             }
         }
     };
+    
 
     return (
         

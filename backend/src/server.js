@@ -16,6 +16,10 @@ const port = 8000;
 
 
 app.use(bodyParser.json());
+app.use(cors({
+  origin: 'https://cmsproject-sailakshmi004s-projects.vercel.app'
+}));
+
 // app.use(cors())
 app.get('/',async(req,res)=>
 {
