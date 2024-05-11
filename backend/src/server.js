@@ -1,33 +1,20 @@
-
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors=require('cors')
+// const cors=require('cors')
 
 
 const pool =require('./db.js');
-
-
-
-
-
 const app = express();
 const port = 8000;
 
-
-
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'https://cmsproject-sailakshmi004s-projects.vercel.app'
-}));
+
 
 // app.use(cors())
 app.get('/',async(req,res)=>
 {
     res.send("ok")
 })
-
-
-
 
 app.post('/register', async (req, res) => {
     const { name, email,password } = req.body;
