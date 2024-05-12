@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors=require('cors')
+// const cors=require('cors')
 
 
 const pool =require('./db.js');
@@ -11,9 +11,9 @@ app.use(bodyParser.json());
 
 
 // app.use(cors())
-app.use(cors({
-  origin: '*'
-}));
+// app.use(cors({
+//   origin: '*'
+// }));
 
 app.get('/',async(req,res)=>
 {
