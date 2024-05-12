@@ -10,7 +10,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
 
     // Regex pattern for email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;``
 
     // Function to validate email
     const validateEmail = (email) => {
@@ -22,36 +22,6 @@ const Register = () => {
             return false;
         }
     };
-
-    // const Submit = async (event) => {
-    //     event.preventDefault();
-    //     try {
-            
-    //         if (!validateEmail(email)) {
-    //             alert("Fill details");
-
-    //             // alert("Invalid email format address");
-    //             return;
-    //         }
-
-    //         const response = await axios.post('https://post-khhn.onrender.com/register', { name, email, password });
-
-
-    //         if (response.data) {
-    //             console.log(response.data);
-    //             alert("Successfully Registered");
-    //             nav("/login");
-    //         }
-    //     } catch (error) {
-    //         if (error.response) {
-    //             console.log("Email already exists");
-    //             // alert("Fill details");
-    //         } else {
-    //             console.log(error);
-    //             alert("An error occurred. Please try again later.");
-    //         }
-    //     }
-    // };
 
     const Submit = async (event) => {
         event.preventDefault();
