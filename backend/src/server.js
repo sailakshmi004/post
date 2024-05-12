@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // app.use(cors())
 app.use(cors({
-  origin: 'https://cmsproject-sailakshmi004s-projects.vercel.app'
+  origin: '*'
 }));
 
 app.get('/',async(req,res)=>
