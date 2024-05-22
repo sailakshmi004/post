@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// const cors=require('cors')
+const cors=require('cors')
 
 
 const pool =require('./db.js');
@@ -8,9 +8,16 @@ const app = express();
 const port = 8000;
 
 app.use(bodyParser.json());
+// const cors = require('cors');
+app.use(cors())
 
+const corsOptions ={
+    origin:'https://post-khhn.onrender.com/' ,
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
-// app.use(cors())
 // app.use(cors({
 //   origin: '*'
 // }));
