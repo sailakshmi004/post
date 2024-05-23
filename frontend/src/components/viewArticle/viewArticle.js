@@ -46,7 +46,8 @@ const ArticleListPage = () => {
   };
 
   return (
-    <div className="full-page-background" style={{ backgroundColor: "#F0F0F0" }}>
+    <div className="full-page-background" style={{ backgroundColor: "#c7c2c2" }}>
+    
       <div className='viewarticle' style={{ padding: '50px 0' }}>
         <h1 className="text-center" style={{ fontFamily: "monospace", fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem' }}>Articles</h1>
         <div className="container">
