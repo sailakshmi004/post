@@ -8,7 +8,7 @@ const ArticleListPage = () => {
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const response = await axios.get('https://post-khhn.onrender.com/art');
+        const response = await axios.get(`${process.env.REACT_APP_server}/articls`);
         setArticles(response.data);
       } catch (error) {
         console.error('Error fetching articles:', error);
@@ -19,7 +19,7 @@ const ArticleListPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://post-khhn.onrender.com/art/${id}`);
+      await axios.delete(`/art/${id}`);
       setArticles(articles.filter(article => article.id !== id));
       alert('Article deleted successfully');
     } catch (error) {
@@ -30,7 +30,7 @@ const ArticleListPage = () => {
 
   const handleUpdate = async (id, updatedData) => {
     try {
-      await axios.put(`https://post-khhn.onrender.com/art/${id}`, updatedData);
+      await axios.put(`${process.env.REACT_APP_server}/art/${id}`, updatedData);
       const updatedArticles = articles.map(article => {
         if (article.id === id) {
           return { ...article, ...updatedData };
@@ -46,9 +46,9 @@ const ArticleListPage = () => {
   };
 
   return (
-    <div className="full-page-background" style={{backgroundColor:"#F0F0F0"}}>
+    <div className="full-page-background" style={{ backgroundColor: "#F0F0F0" }}>
       <div className='viewarticle' style={{ padding: '50px 0' }}>
-        <h1 className="text-center" style={{ fontFamily:"monospace", fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem' }}>Articles</h1>
+        <h1 className="text-center" style={{ fontFamily: "monospace", fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem' }}>Articles</h1>
         <div className="container">
           <div className="row">
             {articles.map(article => (

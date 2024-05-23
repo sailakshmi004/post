@@ -9,14 +9,14 @@ const port = 8000;
 
 app.use(bodyParser.json());
 // const cors = require('cors');
-app.use(cors())
+// app.use(cors())
 
-const corsOptions ={
-    origin:'https://post-khhn.onrender.com/' ,
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+// const corsOptions ={
+//     origin:'${process.env.REACT_APP_server}/' ,
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
+// app.use(cors(corsOptions));
 
 // app.use(cors({
 //   origin: '*'
@@ -91,7 +91,7 @@ app.get('/userdata/:id', async (req, res) => {
 });
 
 
-app.get('/art', async (req, res) => {
+app.get('/articls', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT * FROM art');
     res.json(rows);

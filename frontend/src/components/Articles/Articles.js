@@ -17,7 +17,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://post-khhn.onrender.com/art', { title, content, author });
+      await axios.post('${process.env.REACT_APP_server}/art', { title, content, author });
       alert('Article created successfully');
       setTitle('');
       setContent('');

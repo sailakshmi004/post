@@ -10,7 +10,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
 
     // Regex pattern for email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;``
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Function to validate email
     const validateEmail = (email) => {
@@ -36,7 +36,7 @@ const Register = () => {
                 return;
             }
     
-            const response = await axios.post('https://post-khhn.onrender.com/register', { name, email, password });
+            const response = await axios.post('${process.env.REACT_APP_server}/register', { name, email, password });
     
             if (response.data) {
                 console.log(response.data);

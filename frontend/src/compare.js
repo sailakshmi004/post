@@ -15,7 +15,7 @@ const Login = () => {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:8000/login', { email, password });
+            const response = await axios.post('${process.env.REACT_APP_server}/login', { email, password });
             if (response.data.message === 'Login successful') {
                 console.log(response.data);
                 alert("Login Successful");
