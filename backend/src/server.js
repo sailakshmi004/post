@@ -91,7 +91,7 @@ app.get('/userdata/:id', async (req, res) => {
 });
 
 
-app.get('/articls', async (req, res) => {
+app.get('/articles', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT * FROM art');
     res.json(rows);
