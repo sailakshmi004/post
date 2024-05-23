@@ -9,7 +9,7 @@ const port = 8000;
 
 // app.use(bodyParser.json());
 // const cors = require('cors');
-// app.use(cors())
+app.use(cors())
 
 // const corsOptions ={
 //     origin:'${process.env.REACT_APP_server}/' ,
