@@ -36,7 +36,7 @@ const Register = () => {
                 return;
             }
     
-            const response = await axios.post('${process.env.REACT_APP_server}/register', { name, email, password });
+            const response = await axios.post(`${process.env.REACT_APP_server}/register`, { name, email, password });
     
             if (response.data) {
                 console.log(response.data);
