@@ -7,7 +7,7 @@ const pool =require('./db.js');
 const app = express();
 const port = 8000;
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 // const cors = require('cors');
 // app.use(cors())
 
