@@ -5,6 +5,7 @@ import Register from './components/Register/register';
 import Login from './components/login/login';
 import Articles from './components/Articles/Articles'
 import View from './components/viewArticle/viewArticle';
+import HomePage from './components/homepage/homepage';
 
 function App() {
   // return (
@@ -32,10 +33,12 @@ function App() {
     <BrowserRouter>
     <Routes>
     
-    <Route path='/' element={<Register/>}/>
+    <Route path='/register' element={<Register/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/article' element={<Articles/>}/>
     <Route path='/viewArticle' element={<View/>}/>
+    <Route path='/' element={<HomePage/>}/>
+
     
     
 
